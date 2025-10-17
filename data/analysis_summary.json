@@ -1,0 +1,35 @@
+{
+  "total_records": 2000,
+  "date_range": [
+    "2010-01-01T00:00:00",
+    "2023-12-31T00:00:00"
+  ],
+  "spatial_bounds": {
+    "lat_min": -59.889019333137576,
+    "lat_max": 69.84982753400206,
+    "lon_min": -179.9368142911476,
+    "lon_max": 179.934018970564
+  },
+  "ocean_distribution": {
+    "Pacific": 705,
+    "Atlantic": 478,
+    "Indian": 414,
+    "Arctic": 206,
+    "Southern": 197
+  },
+  "region_distribution": {
+    "North Pacific": 269,
+    "South Atlantic": 267,
+    "North Atlantic": 263,
+    "North Indian": 257,
+    "Antarctic": 246,
+    "South Indian": 239,
+    "Arctic": 236,
+    "South Pacific": 223
+  },
+  "hotspot_analysis": {
+    "total_hotspots": 500,
+    "hotspot_rate": 0.25,
+    "threshold_value": 14.090158827173829
+  }
+}

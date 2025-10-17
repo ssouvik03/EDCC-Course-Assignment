@@ -1,0 +1,48 @@
+# Marine Microplastic Prediction Framework - Core Dependencies
+# Python >= 3.8 required
+
+# Core Data Science Libraries
+numpy>=1.21.0
+pandas>=1.5.0
+scikit-learn>=1.2.0
+scipy>=1.7.0
+
+# Visualization Libraries
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0
+folium>=0.14.0
+
+# Interactive Analysis
+jupyter>=1.0.0
+notebook>=6.5.0
+ipykernel>=6.0.0
+
+# Model Persistence and Configuration
+joblib>=1.2.0
+pyyaml>=6.0
+
+# Geospatial Analysis (Core)
+geopandas>=0.12.0
+shapely>=1.8.0
+
+# Data Processing Utilities
+tqdm>=4.64.0
+python-dateutil>=2.8.0
+pytz>=2022.1
+
+# Testing Framework
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Web Utilities
+requests>=2.26.0
+urllib3>=1.26.0
+
+# Development Tools (Optional)
+black>=22.0.0
+flake8>=5.0.0
+
+# Optional: Enhanced LLM Integration (Uncomment if needed)
+# openai>=0.27.0
+# transformers>=4.20.0

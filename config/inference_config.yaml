@@ -1,0 +1,203 @@
+# Inference and Advisory Configuration
+
+# Prediction Engine Settings
+prediction_engine:
+  model_directory: models/
+  default_model: ensemble
+  confidence_thresholds:
+    high: 0.7
+    medium: 0.6
+    low: 0.4
+    
+  # Batch prediction settings
+  batch_processing:
+    max_batch_size: 1000
+    parallel_processing: true
+    n_jobs: -1
+    
+  # Caching settings
+  caching:
+    enabled: true
+    cache_directory: cache/
+    cache_duration_hours: 24
+
+# Risk Level Classification
+risk_levels:
+  very_low: [0.0, 0.2]
+  low: [0.2, 0.4]
+  moderate: [0.4, 0.6]
+  high: [0.6, 0.8]
+  very_high: [0.8, 1.0]
+
+# Advisory Generation Settings
+advisory_generator:
+  # LLM Configuration
+  llm_config:
+    provider: openai  # openai, anthropic, local, or mock
+    model: gpt-3.5-turbo
+    temperature: 0.3
+    max_tokens: 500
+    timeout: 30
+    
+  # Template settings
+  templates:
+    use_dynamic_templates: true
+    template_directory: config/advisory_templates/
+    
+  # Enhancement options
+  enhancement:
+    use_llm_enhancement: true
+    fallback_to_template: true
+    include_technical_details: false
+    
+  # Output formatting
+  output_format:
+    include_metadata: true
+    include_recommendations: true
+    include_follow_up: true
+    format: structured  # structured, plain_text, or html
+
+# Stakeholder Configuration
+stakeholders:
+  environmental_agency:
+    priority_level: critical
+    detail_level: technical
+    contact_methods: [email, sms, api]
+    
+  fisheries:
+    priority_level: high  
+    detail_level: operational
+    contact_methods: [email, radio]
+    
+  public:
+    priority_level: medium
+    detail_level: simplified
+    contact_methods: [website, social_media]
+    
+  research:
+    priority_level: low
+    detail_level: comprehensive  
+    contact_methods: [email, api]
+
+# Advisory Templates by Risk Level
+template_mapping:
+  high_risk:
+    keywords: [urgent, immediate, restrict, avoid, alert]
+    tone: urgent
+    action_timeline: immediate
+    
+  moderate_risk:
+    keywords: [caution, monitor, enhanced, notice]
+    tone: cautionary
+    action_timeline: short_term
+    
+  low_risk:
+    keywords: [normal, routine, standard, continue]
+    tone: informational
+    action_timeline: long_term
+
+# Follow-up Action Configuration  
+follow_up_actions:
+  high_risk:
+    timeline_hours: 24
+    escalation_threshold: 0.9
+    monitoring_frequency: daily
+    automatic_alerts: true
+    
+  moderate_risk:
+    timeline_hours: 72
+    escalation_threshold: 0.7  
+    monitoring_frequency: every_3_days
+    automatic_alerts: false
+    
+  low_risk:
+    timeline_hours: 720  # 30 days
+    escalation_threshold: 0.6
+    monitoring_frequency: weekly
+    automatic_alerts: false
+
+# Advisory Distribution
+distribution:
+  # Automatic distribution rules
+  auto_distribution:
+    enabled: true
+    high_risk_auto_send: true
+    moderate_risk_auto_send: false
+    
+  # Distribution channels
+  channels:
+    email:
+      enabled: true
+      smtp_server: localhost
+      port: 587
+      
+    api:
+      enabled: true
+      endpoint: /api/advisories
+      authentication: api_key
+      
+    file_export:
+      enabled: true
+      directory: exports/advisories/
+      formats: [json, pdf, txt]
+
+# Quality Assurance
+quality_assurance:
+  validation:
+    check_coordinates: true
+    validate_dates: true
+    verify_model_availability: true
+    
+  monitoring:
+    track_advisory_accuracy: true
+    feedback_collection: true
+    performance_metrics: true
+    
+# Logging and Monitoring  
+logging:
+  level: INFO
+  log_directory: logs/
+  rotate_logs: true
+  max_log_size_mb: 100
+  
+  # What to log
+  log_predictions: true
+  log_advisories: true
+  log_errors: true
+  log_performance: true
+
+# Performance Settings
+performance:
+  # Response time targets (seconds)
+  target_prediction_time: 5.0
+  target_advisory_time: 10.0
+  
+  # Resource limits
+  max_concurrent_predictions: 10
+  max_memory_usage_gb: 4.0
+  
+# Security Settings
+security:
+  input_validation: strict
+  sanitize_outputs: true
+  rate_limiting:
+    enabled: true
+    max_requests_per_hour: 1000
+    
+# Development and Testing
+development:
+  mock_llm_responses: false
+  use_test_data: false
+  debug_mode: false
+  
+  # Testing configuration
+  test_locations:
+    - latitude: 35.0
+      longitude: -140.0
+      ocean: Pacific
+      region: North Pacific Gyre
+      
+    - latitude: 40.7
+      longitude: -74.0
+      ocean: Atlantic  
+      region: New York Bight

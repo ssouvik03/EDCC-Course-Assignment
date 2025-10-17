@@ -1,0 +1,63 @@
+# Model Configuration
+model_config:
+  random_state: 42
+  test_size: 0.2
+  cv_folds: 5
+  
+  # Individual model parameters
+  models:
+    random_forest:
+      n_estimators: 100
+      max_depth: 10
+      min_samples_split: 5
+      min_samples_leaf: 2
+      class_weight: balanced
+      
+    gradient_boosting:
+      n_estimators: 100
+      learning_rate: 0.1
+      max_depth: 6
+      subsample: 0.8
+      
+    logistic_regression:
+      C: 1.0
+      class_weight: balanced
+      max_iter: 1000
+      
+  # Ensemble configuration
+  ensemble_method: voting  # voting, stacking, or bagging
+  
+  # Feature selection
+  feature_selection:
+    method: importance  # importance, univariate, or recursive
+    top_k: 50
+    
+  # Hyperparameter optimization
+  hyperparameter_tuning:
+    enabled: true
+    method: optuna  # optuna, grid_search, or random_search
+    n_trials: 50
+    optimization_metric: roc_auc
+    
+# Performance thresholds
+performance_thresholds:
+  minimum_auc: 0.75
+  minimum_accuracy: 0.70
+  maximum_training_time: 1800  # seconds
+  
+# Model persistence
+model_persistence:
+  save_directory: models/
+  versioning: true
+  compression: true
+  
+# Cross-validation settings
+cross_validation:
+  strategy: stratified  # stratified, time_series, or spatial
+  folds: 5
+  shuffle: true
+  
+# Class imbalance handling
+class_imbalance:
+  strategy: balanced_weights  # balanced_weights, smote, or undersample
+  smote_k_neighbors: 5

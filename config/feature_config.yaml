@@ -1,0 +1,155 @@
+# Feature Engineering Configuration
+
+# Temporal features
+temporal_features:
+  enabled: true
+  cyclical_encoding: true
+  trend_features: true
+  seasonal_decomposition: false
+  
+  # Time periods to extract
+  periods:
+    - year
+    - month  
+    - day
+    - quarter
+    - week_of_year
+    - day_of_year
+    
+  # Seasonal groupings
+  seasons:
+    winter: [12, 1, 2]
+    spring: [3, 4, 5] 
+    summer: [6, 7, 8]
+    autumn: [9, 10, 11]
+
+# Spatial features  
+spatial_features:
+  enabled: true
+  coordinate_transformations: true
+  spatial_binning: true
+  distance_calculations: true
+  
+  # Spatial grid resolution
+  spatial_grid:
+    lat_bins: 20
+    lon_bins: 20
+    
+  # Reference points for distance calculations
+  reference_points:
+    pacific_gyre: [35.0, -140.0]
+    atlantic_gyre: [30.0, -40.0]
+    great_barrier_reef: [-18.0, 147.0]
+    mediterranean_center: [36.0, 15.0]
+    north_pole: [90.0, 0.0]
+    equator_center: [0.0, 0.0]
+    
+  # Coastal proximity calculation
+  coastal_proximity:
+    enabled: true
+    coastal_points:
+      - [40.7, -74.0]   # New York
+      - [34.0, -118.2]  # Los Angeles  
+      - [51.5, 0.1]     # London
+      - [35.7, 139.7]   # Tokyo
+      - [-33.9, 151.2]  # Sydney
+
+# Oceanographic features
+oceanographic_features:
+  enabled: true
+  categorical_encoding: true
+  ocean_basin_classification: true
+  water_body_type: true
+  
+  # Major oceans for binary encoding
+  major_oceans:
+    - Pacific
+    - Atlantic
+    - Indian
+    - Arctic
+    - Southern
+    
+  # Water body classification rules
+  water_body_types:
+    polar_threshold: 66.5      # degrees latitude
+    tropical_threshold: 23.5   # degrees latitude
+
+# Distance-based features
+distance_features:
+  enabled: true
+  nearest_neighbor: true
+  centroid_distance: true
+  reference_point_distances: true
+  
+  # Distance calculation method
+  distance_method: haversine  # haversine, euclidean, or great_circle
+  
+# Interaction features
+interaction_features:
+  enabled: true
+  temporal_spatial_interactions: true
+  distance_temporal_interactions: true
+  coordinate_products: true
+  
+  # Specific interactions to create
+  interactions:
+    - [latitude, month]
+    - [longitude, quarter]
+    - [distance_to_pacific_gyre, season]
+
+# Aggregation features
+aggregation_features:
+  enabled: true
+  spatial_aggregations: true
+  temporal_aggregations: true
+  
+  # Aggregation functions
+  aggregation_functions:
+    - count
+    - mean
+    - std
+    - min
+    - max
+    - nunique
+    
+  # Grouping variables
+  spatial_grouping: spatial_grid
+  temporal_grouping: month
+
+# Feature scaling and normalization
+feature_scaling:
+  enabled: true
+  method: standard  # standard, minmax, robust, or quantile
+  
+# Feature selection post-engineering
+feature_selection:
+  enabled: true
+  correlation_threshold: 0.95  # Remove highly correlated features  
+  variance_threshold: 0.01     # Remove low variance features
+  
+# Data quality checks
+data_quality:
+  missing_value_threshold: 0.3  # Max proportion of missing values
+  outlier_detection: true
+  outlier_method: iqr  # iqr, zscore, or isolation_forest
+  outlier_threshold: 3.0
+
+# Performance optimization
+performance:
+  parallel_processing: true
+  n_jobs: -1  # Use all available cores
+  chunk_size: 1000  # For large datasets
+  
+# Feature importance tracking
+feature_importance:
+  track_feature_groups: true
+  export_importance_plots: true
+  
+  # Feature groups for analysis
+  feature_groups:
+    temporal: [year, month, day, season, quarter, sin, cos, since]
+    spatial: [lat, lon, x, y, z, bin, grid, hemisphere, equator]  
+    oceanographic: [ocean, region, basin, water]
+    distance: [distance]
+    interaction: [interaction, product, magnitude]
+    aggregation: [spatial_, monthly_, count, mean, std]

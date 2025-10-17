@@ -1,0 +1,390 @@
+{
+  "top_features": {
+    "random_forest": [
+      [
+        "Concentration",
+        0.6601625670960853
+      ],
+      [
+        "days_since_start",
+        0.013083290916608353
+      ],
+      [
+        "years_since_start",
+        0.012016918057165638
+      ],
+      [
+        "gyre_distance_season",
+        0.011696307604356151
+      ],
+      [
+        "day_sin",
+        0.009920252599977118
+      ],
+      [
+        "day_cos",
+        0.009626509750042771
+      ],
+      [
+        "nearest_neighbor_distance",
+        0.009560583027266393
+      ],
+      [
+        "lat_month_interaction",
+        0.009202658784735725
+      ],
+      [
+        "distance_to_pacific_gyre",
+        0.009190664756370525
+      ],
+      [
+        "distance_to_great_barrier_reef",
+        0.009099650723873256
+      ],
+      [
+        "y",
+        0.009022299459952287
+      ],
+      [
+        "lat_lon_product",
+        0.008920187230074924
+      ],
+      [
+        "distance_to_centroid",
+        0.008541087551776374
+      ],
+      [
+        "x",
+        0.008342657654902549
+      ],
+      [
+        "Latitude",
+        0.008119958585075651
+      ],
+      [
+        "distance_to_atlantic_gyre",
+        0.008037583456381761
+      ],
+      [
+        "day",
+        0.007877344509538088
+      ],
+      [
+        "coastal_proxy",
+        0.0078351166002778
+      ],
+      [
+        "day_of_year",
+        0.007786106456646226
+      ],
+      [
+        "distance_to_mediterranean_center",
+        0.007565052486252527
+      ]
+    ],
+    "gradient_boosting": [
+      [
+        "Concentration",
+        0.999999999999997
+      ],
+      [
+        "spatial_year_min",
+        9.344369549477916e-16
+      ],
+      [
+        "spatial_Latitude_std",
+        7.502378719303426e-16
+      ],
+      [
+        "distance_from_prime_meridian",
+        7.402349932682849e-16
+      ],
+      [
+        "distance_from_equator",
+        4.212305037458643e-16
+      ],
+      [
+        "distance_to_mediterranean_center",
+        2.841454736029167e-16
+      ],
+      [
+        "coastal_proxy",
+        2.5615279394237573e-16
+      ],
+      [
+        "Longitude",
+        1.7506960232753166e-16
+      ],
+      [
+        "days_since_start",
+        1.6687943643784042e-16
+      ],
+      [
+        "day_sin",
+        4.4032441161478894e-17
+      ],
+      [
+        "distance_to_north_pole",
+        4.252734025351418e-17
+      ],
+      [
+        "z",
+        4.043997403078938e-17
+      ],
+      [
+        "y",
+        1.1645306295201505e-17
+      ],
+      [
+        "Latitude",
+        0.0
+      ],
+      [
+        "year",
+        0.0
+      ],
+      [
+        "month",
+        0.0
+      ],
+      [
+        "day",
+        0.0
+      ],
+      [
+        "day_of_year",
+        0.0
+      ],
+      [
+        "week_of_year",
+        0.0
+      ],
+      [
+        "quarter",
+        0.0
+      ]
+    ],
+    "logistic_regression": [
+      [
+        "Concentration",
+        10.401228753841764
+      ],
+      [
+        "distance_to_mediterranean_center",
+        0.5811639426162092
+      ],
+      [
+        "coord_magnitude",
+        0.38423160789490646
+      ],
+      [
+        "spatial_year_max",
+        0.38419462036922153
+      ],
+      [
+        "lon_bin",
+        0.3145642465528357
+      ],
+      [
+        "spatial_year_nunique",
+        0.24921692249116242
+      ],
+      [
+        "spatial_grid",
+        0.24285162312705044
+      ],
+      [
+        "lon_season_interaction",
+        0.23664794258965463
+      ],
+      [
+        "spatial_Longitude_mean",
+        0.23634628098829008
+      ],
+      [
+        "lat_bin",
+        0.22578134345278666
+      ],
+      [
+        "lat_month_interaction",
+        0.21648081199859048
+      ],
+      [
+        "spatial_year_min",
+        0.2014859223653336
+      ],
+      [
+        "Regions_Antarctic",
+        0.1972555044215309
+      ],
+      [
+        "Regions_South Atlantic",
+        0.18875539367467256
+      ],
+      [
+        "eastern_hemisphere",
+        0.1797524144591214
+      ],
+      [
+        "monthly_Longitude_mean",
+        0.17153908240958035
+      ],
+      [
+        "monthly_Latitude_mean",
+        0.16214120691095096
+      ],
+      [
+        "spatial_Latitude_std",
+        0.15590697068618398
+      ],
+      [
+        "month_cos",
+        0.1508183369152723
+      ],
+      [
+        "day_sin",
+        0.14088215136715243
+      ]
+    ]
+  },
+  "group_analysis": {
+    "random_forest": {
+      "temporal": 0.006029908434536982,
+      "spatial": 0.006389010466988166,
+      "oceanographic": 0.0014969015025221247,
+      "distance": 0.00819837024763487,
+      "interaction": 0.008076697051237784,
+      "aggregation": 0.004288557766328081
+    },
+    "gradient_boosting": {
+      "temporal": 5.4540420597481474e-17,
+      "spatial": 7.000312212048041e-17,
+      "oceanographic": 0.0,
+      "distance": 5.676787196964886e-17,
+      "interaction": 0.0,
+      "aggregation": 1.403895689065112e-16
+    },
+    "logistic_regression": {
+      "temporal": 0.12767214160585652,
+      "spatial": 0.11807073070646687,
+      "oceanographic": 0.06024632910690364,
+      "distance": 0.10751837984840326,
+      "interaction": 0.2240061796740066,
+      "aggregation": 0.179109499304588
+    }
+  },
+  "feature_groups": {
+    "temporal": [
+      "year",
+      "month",
+      "day",
+      "day_of_year",
+      "week_of_year",
+      "quarter",
+      "month_sin",
+      "month_cos",
+      "day_sin",
+      "day_cos",
+      "days_since_start",
+      "years_since_start",
+      "lat_month_interaction",
+      "lon_season_interaction",
+      "gyre_distance_season",
+      "spatial_year_min",
+      "spatial_year_max",
+      "spatial_year_nunique",
+      "monthly_Latitude_count",
+      "monthly_Latitude_mean",
+      "monthly_Longitude_mean"
+    ],
+    "spatial": [
+      "Latitude",
+      "Longitude",
+      "year",
+      "day",
+      "day_of_year",
+      "week_of_year",
+      "day_sin",
+      "day_cos",
+      "days_since_start",
+      "years_since_start",
+      "lat_rad",
+      "lon_rad",
+      "x",
+      "y",
+      "z",
+      "lat_bin",
+      "lon_bin",
+      "spatial_grid",
+      "distance_from_equator",
+      "northern_hemisphere",
+      "eastern_hemisphere",
+      "coastal_proxy",
+      "distance_to_pacific_gyre",
+      "distance_to_atlantic_gyre",
+      "distance_to_equator_center",
+      "lat_month_interaction",
+      "lon_season_interaction",
+      "gyre_distance_season",
+      "lat_lon_product",
+      "spatial_Latitude_count",
+      "spatial_Latitude_mean",
+      "spatial_Latitude_std",
+      "spatial_Longitude_mean",
+      "spatial_Longitude_std",
+      "spatial_year_min",
+      "spatial_year_max",
+      "spatial_year_nunique",
+      "monthly_Latitude_count",
+      "monthly_Latitude_mean",
+      "monthly_Longitude_mean"
+    ],
+    "oceanographic": [
+      "Oceans_encoded",
+      "Oceans_Pacific",
+      "Oceans_Atlantic",
+      "Oceans_Indian",
+      "Oceans_Arctic",
+      "Oceans_Southern",
+      "Regions_encoded",
+      "Regions_North Pacific",
+      "Regions_South Atlantic",
+      "Regions_North Atlantic",
+      "Regions_North Indian",
+      "Regions_Antarctic"
+    ],
+    "distance": [
+      "distance_from_equator",
+      "distance_from_prime_meridian",
+      "distance_to_pacific_gyre",
+      "distance_to_atlantic_gyre",
+      "distance_to_great_barrier_reef",
+      "distance_to_mediterranean_center",
+      "distance_to_north_pole",
+      "distance_to_equator_center",
+      "nearest_neighbor_distance",
+      "distance_to_centroid",
+      "gyre_distance_season"
+    ],
+    "interaction": [
+      "lat_month_interaction",
+      "lon_season_interaction",
+      "lat_lon_product",
+      "coord_magnitude"
+    ],
+    "aggregation": [
+      "spatial_grid",
+      "spatial_Latitude_count",
+      "spatial_Latitude_mean",
+      "spatial_Latitude_std",
+      "spatial_Longitude_mean",
+      "spatial_Longitude_std",
+      "spatial_year_min",
+      "spatial_year_max",
+      "spatial_year_nunique",
+      "monthly_Latitude_count",
+      "monthly_Latitude_mean",
+      "monthly_Longitude_mean"
+    ]
+  }
+}
